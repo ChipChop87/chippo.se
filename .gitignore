@@ -26,6 +26,12 @@ playwright-report/
 test-results/
 .playwright/
 
+# graphify / Claude Code session artefacts (local tooling, not part of the site)
+.claude/CLAUDE.md
+.claude/settings.json
+.claude/skills/graphify/
+graphify-out/
+
 # Logs / temp
 *.log
 tmp/
