@@ -16,6 +16,16 @@ secrets.*
 # Private reference material – must not be published
 private-reference/
 
+# Tooling / build artefacts (node, Playwright, Vercel, Supabase, etc.)
+node_modules/
+dist/
+.cache/
+.vercel/
+.supabase/
+playwright-report/
+test-results/
+.playwright/
+
 # Logs / temp
 *.log
 tmp/

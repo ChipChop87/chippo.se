@@ -6,38 +6,55 @@ GitHub och kontakt. Inte den fullständiga portfolion.
 
 ## Current state
 
-v1.0 byggd och QA-testad lokalt. Sidan är komplett och redo för
-security-content-review + deployment.
+v2.0 byggd och lokalt verifierad (programmatiskt). Elegant Hermes/Huly-gateway med
+ägarens guld-emblemlogga som flytande centrum. Redo för din visuella granskning,
+sedan security-content-review + deployment.
 
-**Git:** Första lokala commiten gjord 2026-06-02 — `3872b73 Initial chippo.se gateway foundation`
-(55 filer, working tree clean). Ingen GitHub-push och ingen Cloudflare-deploy ännu (medvetet).
+**Git:** Två committade versioner finns — `3872b73 Initial chippo.se gateway foundation`
+och `70d12bb Update handoff after initial gateway commit`. Allt efter det (egen bild,
+"The Threshold", ram+regn, samt denna v2.0-omarbetning) ligger **ocommittat** i working tree.
+Ingen GitHub-push, ingen Cloudflare-deploy (medvetet).
 
-- `index.html`, `style.css`, `script.js` klara och fungerar med
-  `python -m http.server 8000`.
+**v2.1 (ocommittad) – elegant Hermes/Huly-gateway, emblem höger + bakgrundsbilder:**
+- Tvåkolumns-hero: text vänster, **guld-emblem höger**, större och mer genomskinligt
+  (`opacity:.82`, `mix-blend:screen` döljer loggans svarta bakgrund).
+- **Diskret silhuett-bakgrund** i hero (`bg-silhouette.jpg`, mor & barn) som tonas upp
+  vid hover (invert+screen). Optimerad till 162 KB JPEG.
+- **Stor klick-länk till chippo.dev** (`.portal-link`) där nyckel/dörr-bilden
+  (`portfolio-key.png`) visas diskret vid hover; hela ytan klickbar till portfolion.
+- Kvar som kort: GitHub + Kontakt. **Borttaget tidigare:** matrix-regn, terminal,
+  ram/portal, nyckel-profilbild i hero (hör till chippo.dev).
+- `index.html`, `style.css`, `script.js`, `404.html`. Vanilla, ingen CDN, reduced-motion
+  täckt, en h1, alt-text, fokusringar. Inget Chrome-/browser-verktyg fanns för visuell matchning.
+- **OBS domänroll:** silhuetten har familjekaraktär (hör annars till angmans.se) – används
+  medvetet på ägarens begäran som diskret atmosfär. Se SECURITY_NOTES.md.
+
+**Designnotis:** Typsnitt är system-säkra (Georgia + system-sans) p.g.a. no-CDN-regeln.
+Ett self-hostat display-typsnitt kan läggas i `assets/fonts/` senare utan att bryta regeln.
+
 - Stödfiler: `404.html`, `robots.txt`, `sitemap.xml`, `.editorconfig`, `.gitignore`.
-- Egna SVG-tillgångar (logo + favicon).
-- Hela dokumentationssetet skrivet.
 - `.claude/skills` (23) och `.claude/prompts` (11) installerade.
 - Git initierat (branch `main`), inget remote.
 
 ## Files in flight
 
-Inga halvfärdiga filer. Allt incheckat-redo.
+Inga halvfärdiga filer. Allt v2.0-arbete är klart men ocommittat (väntar på visuell granskning).
 
 ## Changed
 
-Alla filer är nya (session zero). Se `CHANGELOG.md` / `VERSION_LOG.md`.
+Se `CHANGELOG.md` / `VERSION_LOG.md`. Senast: v2.0 elegant omarbetning + byte av hero-symbol.
 
 ## Failed attempts
 
-Inga. Bygget gick rent.
+Inga tekniska. Designriktningen har itererats: nyckel → "The Threshold" → ram+matrix-regn
+→ (på ägarens begäran) tillbaka till en lugn, elegant guld-emblem-gateway utan hacker-element.
 
 ## Next Step
 
-1. Bekräfta att `peter@chippo.se` är aktiv (annars fallback
-   `chippo.angman@gmail.com` + notera i CHANGELOG).
-2. Lägg in riktig hero-bild och skapa `og-image.png` (1200×630), referera i
-   `index.html`.
-3. Kör `.claude/prompts/security-content-review/PROMPT.md`.
-4. Pusha till `ChipChop87/chippo.se` och deploya via Cloudflare Pages.
-5. Dokumentera/återskapa e-post-DNS innan nameserver-byte (se `SECURITY_NOTES.md`).
+1. **Visuell granskning** i browser (desktop/mobil/reduced motion) – bekräfta att guld-emblemet
+   ser bra ut med `mix-blend: screen` mot bakgrunden.
+2. Bekräfta att `peter@chippo.se` är aktiv (annars fallback `chippo.angman@gmail.com` + CHANGELOG).
+3. Skapa `og-image.png` (1200×630) och referera i `index.html`.
+4. Kör `.claude/prompts/security-content-review/PROMPT.md`.
+5. Commit + push till `ChipChop87/chippo.se`, deploya via Cloudflare Pages.
+6. Dokumentera/återskapa e-post-DNS innan nameserver-byte (se `SECURITY_NOTES.md`).

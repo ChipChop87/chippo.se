@@ -75,7 +75,15 @@ Detaljer finns i `INSTRUKTIONER_HOW_TO.md`. Domän/DNS hanteras separat – se �
 
 ## Designdirektion
 
-Hermes-**inspirerad** atmosfär (mörk teal/grön, mystisk, teknisk) men en **original** Chippo-design. Inga Hermes/Huly-loggor, texter, typsnitt eller tillgångar kopieras.
+Elegant, lugn gateway: **Hermes-inspirerad** atmosfär (mörk teal, mystisk, varm)
+med **Huly-inspirerad** struktur (gradient-hero-text, glödande pill-CTA på halo,
+rundade kort, fade-up-reveal, generösa ytor). Ägarens **guldfärgade emblemlogga**
+är det flytande centrumet med en mjuk guldhalo.
+
+Avsiktligt **mindre teknisk/"hacker"** än tidigare versioner – terminal- och
+matrix-element hör hemma på chippo.dev. Inga Hermes/Huly-loggor, texter, typsnitt
+eller tillgångar kopieras. Typsnitt är system-säkra (no-CDN-regeln); ett self-hostat
+display-typsnitt kan läggas i `assets/fonts/` senare.
 
 ## Encoding
 

@@ -14,13 +14,22 @@ All synlig text finns i `index.html`. Sök efter rätt sektion:
 - Korttexter: under `<section class="gateway">`
 Spara alltid filen som **UTF-8** så att `å ä ö` bevaras.
 
-## Byta hero-bild eller logga
-- Märket är i dag en SVG i `assets/logos/chippo-logo.svg` (samma form ligger
-  inline i `index.html` under `.hero-logo`).
-- Vill du använda ett foto/illustration: lägg filen i `assets/images/`
-  (t.ex. `chippo-hero.png`), byt ut `.hero-logo`-innehållet mot en `<img>` med
-  meningsfull `alt`-text, och optimera bilden först.
+## Byta bilder
+Alla bilder ligger i `assets/images/`:
+- **Emblem (hero, höger):** `chippo-logo-gold.png` – nu med **äkta transparent bakgrund**
+  (inbakad), visas via `<img class="emblem-img">`. Ingen blend/ram behövs.
+  Storlek: `.emblem-img { height }`, genomskinlighet: `.emblem-img { opacity }`, halo: `.emblem-halo`.
+- **Diskret hero-bakgrund:** `bg-silhouette.jpg`, sätts i `.hero-bg` (CSS `background`).
+  Den tonas upp vid hover via `.hero:hover .hero-bg { opacity }`. Vita bakgrunder döljs
+  med `invert(1)` + `screen`; använd en mörk/transparent bild om du slipper det.
+- **Nyckel bakom .dev-länken:** `portfolio-key.png`, sätts i `.key-bg`. Visas vid hover
+  via `.portal-link:hover .key-bg { opacity }`. Position: `background-position` i `.key-bg`.
+- Vill du byta någon: lägg ny fil i `assets/images/`, uppdatera sökväg/alt och ev. storlek.
 - Favicon: `assets/favicon/favicon.svg`.
+
+## Stora .dev-länken
+Den stora klickbara rubriken till portfolion är `<a class="portal-link" href="https://chippo.dev">`
+i `index.html`. Texten ändras i `.pl-eyebrow/.pl-title/.pl-sub/.pl-go`.
 
 ## Ändra länkar
 Länkarna finns på flera ställen (header, hero-CTA, kort, footer). Ändra konsekvent:

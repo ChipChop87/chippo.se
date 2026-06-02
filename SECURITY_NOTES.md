@@ -19,9 +19,18 @@ Alla externa länkar med `target="_blank"` använder `rel="noopener noreferrer"`
 Externa mål: `chippo.dev`, `github.com/ChipChop87`. Kontakt via `mailto:`.
 
 ## Bild- och licensnoter
-- Hero-märke och favicon är **egna** SVG:er – inga Hermes-/Huly-tillgångar.
-- Inga hotlinkade externa bilder.
-- Eventuell framtida hero-bild ska vara egenägd/licensierad och optimerad.
+- Alla bilder är **ägarens egna** tillgångar – inga Hermes-/Huly-verk, inga tredjeparts-bilder:
+  - `chippo-logo-gold.png` – guld-emblemlogga (hero, höger).
+  - `bg-silhouette.jpg` – konstnärlig svartvit **silhuett** (mor & barn) som diskret
+    hero-bakgrund. Endast siluetter, inga identifierbara ansikten/personuppgifter.
+  - `portfolio-key.png` – nyckel/dörr-illustration som visas diskret bakom .dev-länken vid hover.
+- Favicon och reservlogga är egna SVG:er. Inga hotlinkade externa bilder.
+
+## Notering om domänroller
+- Silhuett-bakgrunden har familjekaraktär. Enligt masterplanen hör familjeinnehåll
+  hemma på `angmans.se`. Här används den **medvetet och på ägarens uttryckliga begäran**
+  endast som diskret, konstnärlig atmosfär på den personliga gatewayen – inte som
+  familjeporträtt/galleri. chippo.se förblir en gateway till chippo.dev.
 
 ## E-post / DNS-varning
 Innan nameservers byts till Cloudflare: dokumentera och återskapa befintliga

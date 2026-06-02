@@ -1,5 +1,5 @@
 /* =========================================================
-   chippo.se – gateway behaviour
+   chippo.se — gateway behaviour
    Vanilla JS, no dependencies. Defensive and reduced-motion aware.
    ========================================================= */
 (function () {
@@ -8,59 +8,47 @@
   var reduceMotion = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---- 1. Subtle floating hero effect (pointer-driven) ---- */
-  var visual = document.querySelector(".hero-visual");
-  if (visual && !reduceMotion) {
-    var frame = null;
+  /* ---- 0. Trigger the staggered reveal once ready ---- */
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+  ready(function () { document.body.classList.add("is-loaded"); });
 
-    function updateVisual(event) {
-      var x = (event.clientX / window.innerWidth - 0.5) * 12;
-      var y = (event.clientY / window.innerHeight - 0.5) * 12;
-      if (frame) cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(function () {
-        visual.style.transform =
-          "translate3d(" + x.toFixed(2) + "px, " + y.toFixed(2) + "px, 0) scale(1.03)";
-      });
-    }
-
-    window.addEventListener("pointermove", updateVisual, { passive: true });
+  /* ---- 1. Header gains a hairline once scrolled ---- */
+  var header = document.getElementById("siteHeader");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("scrolled", window.scrollY > 8);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 
-  /* ---- 2. Terminal typewriter (decorative, harmless) ---- */
-  var termBody = document.getElementById("terminal-body");
-  var lines = [
-    "> boot chippo.se",
-    "loading identity... ok",
-    "portfolio target... chippo.dev",
-    "github profile... ChipChop87",
-    "status... building, learning, documenting"
-  ];
+  /* ---- 2. Gentle parallax on the floating emblem ---- */
+  var emblem = document.querySelector(".emblem-float");
+  if (emblem && !reduceMotion) {
+    var frame = null;
+    window.addEventListener("pointermove", function (event) {
+      var x = (event.clientX / window.innerWidth - 0.5) * 10;
+      var y = (event.clientY / window.innerHeight - 0.5) * 10;
+      if (frame) cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(function () {
+        emblem.style.transform =
+          "translate3d(" + x.toFixed(2) + "px, " + y.toFixed(2) + "px, 0)";
+      });
+    }, { passive: true });
+  }
 
-  if (termBody) {
-    var fullText = lines.join("\n");
-
-    if (reduceMotion) {
-      // Show the full block immediately, no animation.
-      termBody.textContent = fullText;
-      termBody.removeAttribute("aria-hidden");
-      return;
-    }
-
-    var i = 0;
-    var cursor = document.createElement("span");
-    cursor.className = "cursor";
-    cursor.textContent = " ";
-
-    function type() {
-      if (i <= fullText.length) {
-        termBody.textContent = fullText.slice(0, i);
-        termBody.appendChild(cursor);
-        i++;
-        // Slightly slower pause on newlines for a natural rhythm.
-        var delay = fullText.charAt(i - 1) === "\n" ? 260 : 28;
-        setTimeout(type, delay);
-      }
-    }
-    type();
+  /* ---- 3. Cards: soft spotlight follows the cursor ---- */
+  if (!reduceMotion) {
+    var cards = document.querySelectorAll(".card");
+    Array.prototype.forEach.call(cards, function (card) {
+      card.addEventListener("pointermove", function (e) {
+        var rect = card.getBoundingClientRect();
+        var mx = ((e.clientX - rect.left) / rect.width) * 100;
+        card.style.setProperty("--mx", mx.toFixed(1) + "%");
+      });
+    });
   }
 })();
