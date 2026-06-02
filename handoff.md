@@ -52,6 +52,18 @@ Ett self-hostat display-typsnitt kan läggas i `assets/fonts/` senare utan att b
 - Skärmdumpar finns i `KomboVersion\qa-shots\` (utanför repot). Playwright-setupen och
   qa-shots ligger kvar i föräldermappen och **committas inte** i detta repo.
 
+**GitHub:** publikt repo `ChipChop87/chippo.se`, branch `main`, pushad
+(commit `8f17e2e`). https://github.com/ChipChop87/chippo.se
+
+**Cloudflare Pages preview – LIVE & VERIFIERAD (2026-06-02):**
+- URL: https://chippo-se.pages.dev (projekt `chippo-se`, Git-kopplat till repot, branch `main`,
+  preset None, tomt build-kommando, output `/`).
+- Verifierat mot live-URL: sidan 200, `style.css`/`script.js`/`og-image.png`/`favicon.svg`/
+  `robots.txt`/`sitemap.xml` alla 200, custom 404 ("Sidan hittades inte") OK, svenska tecken OK,
+  GitHub/chippo.dev/mailto-länkar finns, **inga console errors**.
+- chippo.dev-länken korrekt men måldomänen ej live ännu.
+- **Ingen custom domain, ingen nameserver-ändring, ingen DNS/e-poständring gjord.**
+
 ## Files in flight
 
 Inga halvfärdiga filer. Designen är klar och committad; visuell QA godkänd.
@@ -68,11 +80,12 @@ Inga tekniska. Designriktningen har itererats: nyckel → "The Threshold" → ra
 
 ## Next Step
 
-Visuell QA klar (godkänd). OG/Twitter-bild klar (`assets/og-image.png`, 1200×630, inkopplad
-i metadata, serveras 200, svenska tecken OK, inga console-fel). Återstår, i ordning:
+Klart hittills: design + visuell QA, OG-bild, security-content-review (godkänd), GitHub-push,
+och **Cloudflare Pages preview live & verifierad** (https://chippo-se.pages.dev). Återstår, i ordning:
 1. Bekräfta kontaktadress `peter@chippo.se` (annars fallback `chippo.angman@gmail.com` + notera i CHANGELOG).
-2. Kör `.claude/prompts/security-content-review/PROMPT.md` igen.
-3. Därefter: GitHub remote + push (`ChipChop87/chippo.se`) → Cloudflare Pages preview.
-4. Dokumentera/återskapa e-post-DNS innan nameserver-byte (se `SECURITY_NOTES.md`).
+2. När du vill gå live på domänen: koppla custom domain (`chippo.se` + `www`) i Pages.
+3. **Innan** nameserver-byte hos Inleed: dokumentera/återskapa e-post-DNS (MX/SPF/DKIM/DMARC) i
+   Cloudflare så `peter@chippo.se` inte slutar fungera (se `SECURITY_NOTES.md`).
+4. Verifiera HTTPS + www/apex-beteende efter domänkoppling.
 
-Ingen push och ingen deploy är gjord ännu (medvetet).
+Custom domain, nameserver- och DNS/e-poständring är **medvetet inte** gjorda ännu.
