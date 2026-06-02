@@ -9,6 +9,9 @@ GitHub och kontakt. Inte den fullständiga portfolion.
 v1.0 byggd och QA-testad lokalt. Sidan är komplett och redo för
 security-content-review + deployment.
 
+**Git:** Första lokala commiten gjord 2026-06-02 — `3872b73 Initial chippo.se gateway foundation`
+(55 filer, working tree clean). Ingen GitHub-push och ingen Cloudflare-deploy ännu (medvetet).
+
 - `index.html`, `style.css`, `script.js` klara och fungerar med
   `python -m http.server 8000`.
 - Stödfiler: `404.html`, `robots.txt`, `sitemap.xml`, `.editorconfig`, `.gitignore`.
