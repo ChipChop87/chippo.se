@@ -10,10 +10,16 @@ v2.0 byggd och lokalt verifierad (programmatiskt). Elegant Hermes/Huly-gateway m
 ägarens guld-emblemlogga som flytande centrum. Redo för din visuella granskning,
 sedan security-content-review + deployment.
 
-**Git:** Två committade versioner finns — `3872b73 Initial chippo.se gateway foundation`
-och `70d12bb Update handoff after initial gateway commit`. Allt efter det (egen bild,
-"The Threshold", ram+regn, samt denna v2.0-omarbetning) ligger **ocommittat** i working tree.
-Ingen GitHub-push, ingen Cloudflare-deploy (medvetet).
+**Git:** Tre commits, working tree clean:
+`3872b73` foundation → `70d12bb` handoff → `53d3e18` "Redesign gateway: gold emblem,
+silhouette bg, big chippo.dev link" (hela v2.x-omarbetningen samlad). Ingen GitHub-push,
+ingen deploy ännu (medvetet).
+
+**Tooling tillgängligt (i förälder-mappen KomboVersion, ej i repot):** Supabase, Playwright,
+Vercel, GitHub CLI m.fl. ligger som npm/CLI utanför `chippo.se/`. Repots `.gitignore` är härdad
+mot node_modules/.vercel/.supabase/Playwright-artefakter. OBS: MVP är statisk per masterplanen –
+inför INTE backend (Supabase) eller ramverk i chippo.se utan dokumenterat skäl. Användbart:
+Playwright kan göra riktig visuell QA/skärmdumpar; GitHub CLI för repo+push; Vercel/Cloudflare för deploy.
 
 **v2.1 (ocommittad) – elegant Hermes/Huly-gateway, emblem höger + bakgrundsbilder:**
 - Tvåkolumns-hero: text vänster, **guld-emblem höger**, större och mer genomskinligt
