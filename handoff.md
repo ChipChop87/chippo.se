@@ -42,13 +42,24 @@ Ett self-hostat display-typsnitt kan läggas i `assets/fonts/` senare utan att b
 - `.claude/skills` (23) och `.claude/prompts` (11) installerade.
 - Git initierat (branch `main`), inget remote.
 
+**Visuell QA – GODKÄND (via Playwright 1.60, lokalt på http://localhost:8088):**
+- Desktop 1440×900: OK
+- Mobil 390×844: OK
+- Hover-states (silhuett-bakgrund tonas upp, nyckel/dörr-bild bakom .dev-länken): OK
+- Console errors: inga
+- Svenska tecken (å ä ö): OK
+- chippo.dev-länken korrekt, men **måldomänen är inte live ännu**
+- Skärmdumpar finns i `KomboVersion\qa-shots\` (utanför repot). Playwright-setupen och
+  qa-shots ligger kvar i föräldermappen och **committas inte** i detta repo.
+
 ## Files in flight
 
-Inga halvfärdiga filer. Allt v2.0-arbete är klart men ocommittat (väntar på visuell granskning).
+Inga halvfärdiga filer. Designen är klar och committad; visuell QA godkänd.
 
 ## Changed
 
-Se `CHANGELOG.md` / `VERSION_LOG.md`. Senast: v2.0 elegant omarbetning + byte av hero-symbol.
+Se `CHANGELOG.md` / `VERSION_LOG.md`. Senast committat: `53d3e18` (redesign) + `ec2a24e`
+(tooling-notis). Denna handoff-uppdatering: "Update handoff after visual QA".
 
 ## Failed attempts
 
@@ -57,10 +68,11 @@ Inga tekniska. Designriktningen har itererats: nyckel → "The Threshold" → ra
 
 ## Next Step
 
-1. **Visuell granskning** i browser (desktop/mobil/reduced motion) – bekräfta att guld-emblemet
-   ser bra ut med `mix-blend: screen` mot bakgrunden.
-2. Bekräfta att `peter@chippo.se` är aktiv (annars fallback `chippo.angman@gmail.com` + CHANGELOG).
-3. Skapa `og-image.png` (1200×630) och referera i `index.html`.
-4. Kör `.claude/prompts/security-content-review/PROMPT.md`.
-5. Commit + push till `ChipChop87/chippo.se`, deploya via Cloudflare Pages.
-6. Dokumentera/återskapa e-post-DNS innan nameserver-byte (se `SECURITY_NOTES.md`).
+Visuell QA är klar (godkänd). Återstår, i ordning:
+1. Bekräfta kontaktadress `peter@chippo.se` (annars fallback `chippo.angman@gmail.com` + notera i CHANGELOG).
+2. Skapa/lägg in `og-image.png` (1200×630) och referera i `index.html`.
+3. Kör `.claude/prompts/security-content-review/PROMPT.md` igen.
+4. Därefter: GitHub remote + push (`ChipChop87/chippo.se`) → Cloudflare Pages preview.
+5. Dokumentera/återskapa e-post-DNS innan nameserver-byte (se `SECURITY_NOTES.md`).
+
+Ingen push och ingen deploy är gjord ännu (medvetet).
