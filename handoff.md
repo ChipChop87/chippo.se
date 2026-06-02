@@ -81,11 +81,18 @@ Inga tekniska. Designriktningen har itererats: nyckel → "The Threshold" → ra
 ## Next Step
 
 Klart hittills: design + visuell QA, OG-bild, security-content-review (godkänd), GitHub-push,
-och **Cloudflare Pages preview live & verifierad** (https://chippo-se.pages.dev). Återstår, i ordning:
-1. Bekräfta kontaktadress `peter@chippo.se` (annars fallback `chippo.angman@gmail.com` + notera i CHANGELOG).
-2. När du vill gå live på domänen: koppla custom domain (`chippo.se` + `www`) i Pages.
-3. **Innan** nameserver-byte hos Inleed: dokumentera/återskapa e-post-DNS (MX/SPF/DKIM/DMARC) i
-   Cloudflare så `peter@chippo.se` inte slutar fungera (se `SECURITY_NOTES.md`).
-4. Verifiera HTTPS + www/apex-beteende efter domänkoppling.
+och **Cloudflare Pages preview live & verifierad** (https://chippo-se.pages.dev).
 
-Custom domain, nameserver- och DNS/e-poständring är **medvetet inte** gjorda ännu.
+**DNS-inventering gjord (read-only) – se `docs/EMAIL_DNS_INVENTORY.md`:**
+- ⚠️ Oväntat: `chippo.se` ligger **redan på Cloudflares nameservers** → inget nameserver-byte kvar.
+- MX → Inleed (188.66.60.10, DNS-only) OK; SPF OK; DMARC `p=none` finns (ingen `rua`).
+- DKIM ej hittad publikt (måste verifieras). `mail/smtp/pop` verkar proxade (måste kontrolleras i Cloudflare-dashboard).
+- `peter@chippo.se` ej testad. Inga DNS/custom domain-ändringar gjorda.
+
+Återstår, i ordning:
+1. Hämta full DNS-export från Cloudflare-zonen + testa `peter@chippo.se` (skicka/ta emot).
+2. Besluta DNS-städning (DKIM, proxy-status på mail/smtp/pop, ev. DMARC `rua`) – efter OK.
+3. Koppla custom domain (`chippo.se` + `www`) i Pages-projektet `chippo-se` (zon finns redan).
+4. Verifiera HTTPS + www/apex efter domänkoppling.
+
+Custom domain och alla DNS/e-poständringar är **medvetet inte** gjorda ännu.
