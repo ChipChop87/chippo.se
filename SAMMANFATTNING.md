@@ -38,9 +38,9 @@ VERSION_LOG, CHANGELOG, handoff).
 - Loggan är ägarens egen tillgång; inga kopierade Hermes/Huly-tillgångar.
 
 ## Vad som inte gjordes
-- Ingen `og-image.png` (markerad som TODO i `index.html`).
 - Ingen deploy/push.
 - Inget self-hostat distinkt display-typsnitt (kan läggas i `assets/fonts/`).
+- (Klart sedan tidigare: `assets/og-image.png` skapad och inkopplad i OG/Twitter-metadata.)
 
 ## Kända begränsningar
 - OG-förhandsbild saknas vid social delning.

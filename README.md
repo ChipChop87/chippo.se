@@ -44,7 +44,8 @@ chippo.se/
 ├── .editorconfig
 ├── .gitignore
 ├── assets/
-│   ├── images/             # (hero-bild läggs här om/när den finns)
+│   ├── og-image.png        # social delningsbild (1200×630)
+│   ├── images/             # chippo-logo-gold.png, bg-silhouette.jpg, portfolio-key.png
 │   ├── logos/chippo-logo.svg
 │   └── favicon/favicon.svg
 ├── README.md

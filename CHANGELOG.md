@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.2.0 – OG/Twitter-bild (2026-06-02)
+- Skapade `assets/og-image.png` (1200×630) i sajtens stil: mörk teal-gradient,
+  guld/cream-accenter, eget guld-emblem med mjuk glöd, "Peter Chippo Ångman",
+  undertitel "Personal Gateway to Cyber Security Portfolio" och "chippo.se → chippo.dev".
+  Genererad med GDI+ från egna site-assets – inga externa/Hermes/Huly-bilder.
+- Lade till `og:image` (+ width/height/type/alt) och Twitter/X `summary_large_image`-
+  metadata i `index.html`, med absolut URL `https://chippo.se/assets/og-image.png`.
+- Tog bort tidigare OG-TODO. Verifierat: filen serveras 200, svenska tecken OK, inga console-fel.
+
 ## 2.1.1 – Transparent emblem-bakgrund (2026-06-02)
 - Tog bort den rektangulära "ramen" runt emblemet (`drop-shadow` på en ogenomskinlig PNG).
 - Bakade in **äkta transparens** i `chippo-logo-gold.png` (luminanströskel: mörk

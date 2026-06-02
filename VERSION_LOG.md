@@ -1,5 +1,26 @@
 # Version Log
 
+## v0.6 – OG/Twitter-bild
+
+Date: 2026-06-02
+Goal: Skapa en social delningsbild (og-image) i sajtens stil och koppla in den.
+
+What was done:
+- Skapade `assets/og-image.png` (1200×630) med GDI+ från egna assets (guld-emblem,
+  teal-gradient, cream/guld-text, "Peter Chippo Ångman", undertitel + chippo.se → chippo.dev).
+- Lade till OG- och Twitter/X-metadata i `index.html` (absolut URL).
+- Visuell QA gjord tidigare (Playwright). Verifierat: og-bilden serveras 200, svenska
+  tecken OK, inga console-fel, inga secrets.
+
+What was not done:
+- Ingen deploy/push. Inget self-hostat typsnitt.
+
+Known issues:
+- chippo.dev-länken korrekt men måldomänen ej live ännu.
+
+Next step:
+- Bekräfta kontaktadress → security-content-review → GitHub remote + push → Cloudflare Pages.
+
 ## v0.5 – Emblem höger + diskreta bakgrundsbilder
 
 Date: 2026-06-02

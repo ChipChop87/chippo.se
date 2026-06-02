@@ -68,11 +68,11 @@ Inga tekniska. Designriktningen har itererats: nyckel → "The Threshold" → ra
 
 ## Next Step
 
-Visuell QA är klar (godkänd). Återstår, i ordning:
+Visuell QA klar (godkänd). OG/Twitter-bild klar (`assets/og-image.png`, 1200×630, inkopplad
+i metadata, serveras 200, svenska tecken OK, inga console-fel). Återstår, i ordning:
 1. Bekräfta kontaktadress `peter@chippo.se` (annars fallback `chippo.angman@gmail.com` + notera i CHANGELOG).
-2. Skapa/lägg in `og-image.png` (1200×630) och referera i `index.html`.
-3. Kör `.claude/prompts/security-content-review/PROMPT.md` igen.
-4. Därefter: GitHub remote + push (`ChipChop87/chippo.se`) → Cloudflare Pages preview.
-5. Dokumentera/återskapa e-post-DNS innan nameserver-byte (se `SECURITY_NOTES.md`).
+2. Kör `.claude/prompts/security-content-review/PROMPT.md` igen.
+3. Därefter: GitHub remote + push (`ChipChop87/chippo.se`) → Cloudflare Pages preview.
+4. Dokumentera/återskapa e-post-DNS innan nameserver-byte (se `SECURITY_NOTES.md`).
 
 Ingen push och ingen deploy är gjord ännu (medvetet).
