@@ -16,15 +16,16 @@ Spara alltid filen som **UTF-8** så att `å ä ö` bevaras.
 
 ## Byta bilder
 Alla bilder ligger i `assets/images/`:
-- **Emblem (hero, höger):** `chippo-logo-gold.png` – nu med **äkta transparent bakgrund**
-  (inbakad), visas via `<img class="emblem-img">`. Ingen blend/ram behövs.
-  Storlek: `.emblem-img { height }`, genomskinlighet: `.emblem-img { opacity }`, halo: `.emblem-halo`.
-- **Diskret hero-bakgrund:** `bg-silhouette.jpg`, sätts i `.hero-bg` (CSS `background`).
-  Den tonas upp vid hover via `.hero:hover .hero-bg { opacity }`. Vita bakgrunder döljs
-  med `invert(1)` + `screen`; använd en mörk/transparent bild om du slipper det.
-- **Nyckel bakom .dev-länken:** `portfolio-key.png`, sätts i `.key-bg`. Visas vid hover
-  via `.portal-link:hover .key-bg { opacity }`. Position: `background-position` i `.key-bg`.
+- **Hero-bakgrund (foto):** `hero-bay.jpg` (desktop) + `hero-bay-mobile.jpg` (mobil, porträtt),
+  sätts i `.hero-photo` (CSS `background`). Desktop används som standard; mobilversionen
+  byts in i media query `@media (max-width: 820px)`. Mörkningen styrs av `.hero-scrim`.
+- **Flytande emblem (hero, uppe till höger – stort, sol-likt):** `chippo-logo-gold.png`
+  (äkta transparent), via `<img class="emblem-img">`. Storlek: `.emblem-img { height }`
+  (stor – fungerar som sol/måne), position: `.hero-emblem { top / right }`, varm glöd: `.emblem-halo`.
+- **Nyckel bakom .dev-länken:** `portfolio-key.png`, i `.key-bg`. Visas vid hover via
+  `.portal-link:hover .key-bg { opacity }`.
 - Vill du byta någon: lägg ny fil i `assets/images/`, uppdatera sökväg/alt och ev. storlek.
+  Optimera stora foton till JPEG (~80 % kvalitet) först.
 - Favicon: `assets/favicon/favicon.svg`.
 
 ## Stora .dev-länken

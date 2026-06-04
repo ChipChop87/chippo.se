@@ -20,17 +20,15 @@ Externa mål: `chippo.dev`, `github.com/ChipChop87`. Kontakt via `mailto:`.
 
 ## Bild- och licensnoter
 - Alla bilder är **ägarens egna** tillgångar – inga Hermes-/Huly-verk, inga tredjeparts-bilder:
-  - `chippo-logo-gold.png` – guld-emblemlogga (hero, höger).
-  - `bg-silhouette.jpg` – konstnärlig svartvit **silhuett** (mor & barn) som diskret
-    hero-bakgrund. Endast siluetter, inga identifierbara ansikten/personuppgifter.
+  - `chippo-logo-gold.png` – guld-emblemlogga (hero, sol-likt uppe till höger).
+  - `hero-bay.jpg` / `hero-bay-mobile.jpg` – filmisk bukt/solnedgång (Phishing-Man-tema),
+    full-bleed hero-bakgrund. Endast landskap/siluett, inga identifierbara ansikten/personuppgifter.
   - `portfolio-key.png` – nyckel/dörr-illustration som visas diskret bakom .dev-länken vid hover.
+  - `og-image.png` – social delningsbild (guld-emblem-kort).
 - Favicon och reservlogga är egna SVG:er. Inga hotlinkade externa bilder.
-
-## Notering om domänroller
-- Silhuett-bakgrunden har familjekaraktär. Enligt masterplanen hör familjeinnehåll
-  hemma på `angmans.se`. Här används den **medvetet och på ägarens uttryckliga begäran**
-  endast som diskret, konstnärlig atmosfär på den personliga gatewayen – inte som
-  familjeporträtt/galleri. chippo.se förblir en gateway till chippo.dev.
+- Den tidigare familje-silhuetten (`bg-silhouette.jpg`) togs bort när foto-heron infördes,
+  så den tidigare domänroll-avvägningen (familjeinnehåll hör annars till `angmans.se`) är inte
+  längre aktuell på chippo.se.
 
 ## E-post / DNS-varning
 Innan nameservers byts till Cloudflare: dokumentera och återskapa befintliga

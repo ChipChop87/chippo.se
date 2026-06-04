@@ -45,7 +45,7 @@ chippo.se/
 ├── .gitignore
 ├── assets/
 │   ├── og-image.png        # social delningsbild (1200×630)
-│   ├── images/             # chippo-logo-gold.png, bg-silhouette.jpg, portfolio-key.png
+│   ├── images/             # chippo-logo-gold.png, hero-bay.jpg, hero-bay-mobile.jpg, portfolio-key.png
 │   ├── logos/chippo-logo.svg
 │   └── favicon/favicon.svg
 ├── README.md
@@ -76,10 +76,11 @@ Detaljer finns i `INSTRUKTIONER_HOW_TO.md`. Domän/DNS hanteras separat – se �
 
 ## Designdirektion
 
-Elegant, lugn gateway: **Hermes-inspirerad** atmosfär (mörk teal, mystisk, varm)
-med **Huly-inspirerad** struktur (gradient-hero-text, glödande pill-CTA på halo,
-rundade kort, fade-up-reveal, generösa ytor). Ägarens **guldfärgade emblemlogga**
-är det flytande centrumet med en mjuk guldhalo.
+Elegant, lugn gateway: **Hermes-inspirerad** atmosfär (mörk, mystisk, varm) med
+**Huly-inspirerad** struktur. Hero är en **full-bleed filmisk bakgrundsbild**
+(bukt/solnedgång, Phishing-Man-tema) med text till vänster och ägarens **guldfärgade
+emblemlogga som en stor, sol-likt glödande detalj uppe till höger** (smälter in i
+solnedgången). Nedanför: rundade kort och en stor klick-länk till chippo.dev.
 
 Avsiktligt **mindre teknisk/"hacker"** än tidigare versioner – terminal- och
 matrix-element hör hemma på chippo.dev. Inga Hermes/Huly-loggor, texter, typsnitt

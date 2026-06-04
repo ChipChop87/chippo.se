@@ -1,5 +1,31 @@
 # Version Log
 
+## v0.7 – Full-bleed foto-hero (Phishing-Man)
+
+Date: 2026-06-02
+Goal: Byta hero till en filmisk full-bleed bakgrundsbild (bukt/solnedgång, Phishing-Man)
+med text vänster och en liten flytande guld-emblem uppe till höger (likt mockup).
+
+What was done:
+- Optimerade två bakgrunder: `hero-bay.jpg` (1600px) + `hero-bay-mobile.jpg` (800px porträtt).
+- Byggde om hero: full-bleed foto, vänster-scrim, textblock, flytande emblem top-right.
+- Transparent header över fotot (bakgrund vid scroll), text-shadow för läsbarhet.
+- Mobilnav justerad (ryms ner till 360px). Tog bort `.hero-bg`-silhuetten och raderade
+  oanvända `bg-silhouette.jpg`.
+- Tog bort citattecken runt "Chippo" i synliga sajten (title + footer); docs behåller kanonisk form.
+- Större, sol-likt emblem (fungerar som sol/måne i solnedgången).
+- Verifierat med Playwright (desktop/mobil-skärmdumpar + console, inga fel).
+
+What was not done:
+- OG-bilden (`og-image.png`) behölls (guld-emblem-kort) – ej ändrad till foto-tema.
+- Ingen deploy/push (gjord separat när du godkänner).
+
+Known issues:
+- Visuellt granskat via Playwright-skärmdumpar; finjustering av scrim/emblemstorlek möjlig.
+
+Next step:
+- Ditt godkännande → commit/push → (separat spår) e-post-DNS + custom domain.
+
 ## v0.6 – OG/Twitter-bild
 
 Date: 2026-06-02

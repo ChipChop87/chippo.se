@@ -6,9 +6,17 @@ GitHub och kontakt. Inte den fullständiga portfolion.
 
 ## Current state
 
-v2.0 byggd och lokalt verifierad (programmatiskt). Elegant Hermes/Huly-gateway med
-ägarens guld-emblemlogga som flytande centrum. Redo för din visuella granskning,
-sedan security-content-review + deployment.
+**v2.3 (senaste): full-bleed foto-hero.** Hero bytt till en filmisk bakgrundsbild
+(Phishing-Man, bukt/solnedgång): `assets/images/hero-bay.jpg` (desktop) +
+`hero-bay-mobile.jpg` (mobil). Mörk vänster-scrim + text vänster; **stort, sol-likt
+glödande guld-emblem uppe till höger** (fungerar som sol/måne i solnedgången).
+Header transparent över fotot (bakgrund vid scroll).
+Verifierat med Playwright (desktop/mobil, nav ryms till 360px, inga console errors,
+svenska tecken OK). Tog bort oanvända `bg-silhouette.jpg`. Citattecknen runt "Chippo"
+borttagna i synliga sajten (title + footer); docs behåller kanonisk form. OG-bilden
+(`og-image.png`, guld-emblem-kort) behölls. **Ej committat ännu** – väntar på ditt OK.
+
+Tidigare: elegant Hermes/Huly-gateway med guld-emblemlogga. Redo för deployment-spåret.
 
 **Git:** Tre commits, working tree clean:
 `3872b73` foundation → `70d12bb` handoff → `53d3e18` "Redesign gateway: gold emblem,

@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.3.0 – Full-bleed foto-hero (Phishing-Man) (2026-06-02)
+- Bytte hero till en **full-bleed bakgrundsbild** (Phishing-Man, bukt/solnedgång –
+  fishing/phishing-tema): `assets/images/hero-bay.jpg` (desktop) +
+  `assets/images/hero-bay-mobile.jpg` (mobil, porträtt). Optimerade till JPEG (78/118 KB).
+- Mörk vänster-scrim + bottenvignett för textläsbarhet; text vänster (eyebrow, titel,
+  undertitel, lead, GitHub/Kontakt).
+- **Stor, sol-likt glödande guld-emblem uppe till höger** (transparent PNG, varm halo + float)
+  som smälter in i solnedgången, istället för det tidigare centrerade emblemet.
+- Header nu transparent över fotot, får bakgrund vid scroll; text-shadow för läsbarhet.
+- Tog bort den tidigare diskreta silhuett-hero-bakgrunden (`.hero-bg`) och raderade den nu
+  oanvända `bg-silhouette.jpg`.
+- Tog bort kvarvarande citattecken runt "Chippo" i den **synliga** sajten (`<title>` + footer);
+  dokumentationens kanoniska namnform `Peter "Chippo" Ångman` behålls.
+- Justerade mobilnav så den ryms ner till 360px.
+- Verifierat (Playwright): desktop + mobil OK, nav ryms, inga console errors, svenska tecken OK.
+
 ## 2.2.0 – OG/Twitter-bild (2026-06-02)
 - Skapade `assets/og-image.png` (1200×630) i sajtens stil: mörk teal-gradient,
   guld/cream-accenter, eget guld-emblem med mjuk glöd, "Peter Chippo Ångman",

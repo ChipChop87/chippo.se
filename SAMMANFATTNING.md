@@ -1,15 +1,14 @@
-# Sammanfattning – chippo.se v2.1
+# Sammanfattning – chippo.se v2.3
 
 ## Vad som byggdes
 En statisk, responsiv och elegant gateway-sida för Peter "Chippo" Ångman:
-- Sticky header med serif-wordmark och versalt spärrad navigation.
-- Tvåkolumns-hero: gradient-rubrik/text vänster, ägarens **guldfärgade emblemlogga**
-  större och halvtransparent till höger (guldhalo + subtil pekarparallax).
-- **Diskret silhuett-bakgrund** (mor & barn) i hero som tonas upp vid hover (Huly-likt).
+- Transparent header (bakgrund vid scroll) med serif-wordmark + versal navigation.
+- **Full-bleed foto-hero** (Phishing-Man, bukt/solnedgång) med mörk vänster-scrim;
+  text vänster (eyebrow, gradient-titel, undertitel, lead, GitHub/Kontakt).
+- **Stor, sol-likt glödande guld-emblem uppe till höger** (transparent PNG, varm halo + float).
 - **Stor klick-länk till chippo.dev** där en nyckel/dörr-bild visas diskret vid hover.
 - Två rundade gateway-kort (GitHub, Kontakt) med cursor-spotlight.
 - Footer med kort copyright och länkar.
-- Mjuk atmosfär: drivande guld/teal-glöd, vignette. Inga "hacker"-element.
 
 ## Vad som ändrades
 - **Bort:** matrix-/hackertyper-regnet och nyckel-/profilbilden samt
