@@ -14,14 +14,19 @@ Header transparent över fotot (bakgrund vid scroll).
 Verifierat med Playwright (desktop/mobil, nav ryms till 360px, inga console errors,
 svenska tecken OK). Tog bort oanvända `bg-silhouette.jpg`. Citattecknen runt "Chippo"
 borttagna i synliga sajten (title + footer); docs behåller kanonisk form. OG-bilden
-(`og-image.png`, guld-emblem-kort) behölls. **Ej committat ännu** – väntar på ditt OK.
+(`og-image.png`, guld-emblem-kort) behölls.
 
-Tidigare: elegant Hermes/Huly-gateway med guld-emblemlogga. Redo för deployment-spåret.
+**Status v2.3:** committad (`3aefc07 Refine chippo.se v2.3 hero design`), **pushad till GitHub**,
+och **Cloudflare Pages-preview live & verifierad** (https://chippo-se.pages.dev — alla resurser 200,
+hero-bilder live, inga citattecken i synlig text, inga console errors, svenska tecken OK).
+**Codex second-pass QA genomförd**; konkreta småfynd åtgärdade: 404-knapp → `.btn-outline`,
+README `script.js`-beskrivning uppdaterad, denna handoff uppdaterad.
 
-**Git:** Tre commits, working tree clean:
-`3872b73` foundation → `70d12bb` handoff → `53d3e18` "Redesign gateway: gold emblem,
-silhouette bg, big chippo.dev link" (hela v2.x-omarbetningen samlad). Ingen GitHub-push,
-ingen deploy ännu (medvetet).
+Kvar: **chippo.dev ej live** (extern dependency/blockerare för slutlig public launch, men ingen
+bug i chippo.se), samt DNS/e-post-städning och custom domain.
+
+**Git:** publikt repo `ChipChop87/chippo.se`, branch `main`, pushad. Senaste pushade commit: `3aefc07`.
+(Codex-fix för 404-knapp/docs ligger ocommittat i working tree tills godkänt.)
 
 **Tooling tillgängligt (i förälder-mappen KomboVersion, ej i repot):** Supabase, Playwright,
 Vercel, GitHub CLI m.fl. ligger som npm/CLI utanför `chippo.se/`. Repots `.gitignore` är härdad

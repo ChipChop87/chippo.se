@@ -37,7 +37,7 @@ python -m http.server 8000
 chippo.se/
 ├── index.html              # Gateway-sidan
 ├── style.css               # Stilar (dark teal, Hermes-inspirerad atmosfär)
-├── script.js               # Floating-effekt + terminal-typewriter (defensiv vanilla JS)
+├── script.js               # Reveal vid load, header-scroll, emblem-parallax, kort-spotlight (defensiv vanilla JS)
 ├── 404.html
 ├── robots.txt
 ├── sitemap.xml
