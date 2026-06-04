@@ -1,5 +1,10 @@
 # Sammanfattning – chippo.se v2.3
 
+> **🟢 PUBLICERAD 2026-06-04:** chippo.se + www.chippo.se är live via Cloudflare Pages, HTTPS OK,
+> DNS verifierad (mail/smtp/pop DNS Only), e-post `peter@chippo.se` fungerar, kontaktlänk fungerar.
+> Se `docs/RELEASE_NOTES.md`. Nästa fokus: chippo.dev (ny session).
+
+
 ## Vad som byggdes
 En statisk, responsiv och elegant gateway-sida för Peter "Chippo" Ångman:
 - Transparent header (bakgrund vid scroll) med serif-wordmark + versal navigation.

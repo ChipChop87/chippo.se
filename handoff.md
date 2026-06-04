@@ -22,11 +22,27 @@ hero-bilder live, inga citattecken i synlig text, inga console errors, svenska t
 **Codex second-pass QA genomförd**; konkreta småfynd åtgärdade: 404-knapp → `.btn-outline`,
 README `script.js`-beskrivning uppdaterad, denna handoff uppdaterad.
 
-Kvar: **chippo.dev ej live** (extern dependency/blockerare för slutlig public launch, men ingen
-bug i chippo.se), samt DNS/e-post-städning och custom domain.
+### ✅ PUBLICERAD – chippo.se v2.3 LIVE (2026-06-04)
 
-**Git:** publikt repo `ChipChop87/chippo.se`, branch `main`, pushad. Senaste pushade commit: `3aefc07`.
-(Codex-fix för 404-knapp/docs ligger ocommittat i working tree tills godkänt.)
+chippo.se är nu publicerad på sin egen domän via Cloudflare Pages:
+- **https://chippo.se** → HTTP 200, HTTPS OK (verifierat read-only).
+- **https://www.chippo.se** → HTTP 200, HTTPS OK (båda serverar; www gör 200, ingen apex-redirect konfigurerad).
+- **Hosting:** Cloudflare Pages (projekt `chippo-se`, Git-kopplat till `ChipChop87/chippo.se`, branch `main`).
+- **Custom domain:** `chippo.se` + `www.chippo.se` kopplade i Pages.
+- **DNS verifierad.** MX pekar nu på `mail.chippo.se`. `mail/smtp/pop` är **DNS Only** (ägar-bekräftat
+  i Cloudflare-dashboarden). Inga mailposter proxas.
+- **E-post `peter@chippo.se` fungerar** för både sändning och mottagning (ägar-testat).
+- **Kontaktlänken fungerar.** Obs: på proxydomänen skriver Cloudflare **Email Address Obfuscation**
+  om `mailto:` till `/cdn-cgi/l/email-protection#…` + avkodningsskript — funktionellt för besökare,
+  dolt för skräppost-skördare (en fördel, ej bugg). På `pages.dev` syns 4 vanliga `mailto:`.
+
+Detta motsvarar **publiceringen av chippo.se v2.3**. Se `docs/RELEASE_NOTES.md`.
+
+**Verifierat av mig (read-only):** apex + www 200/HTTPS, titel/`Ångman`-rendering, kontaktlänkar
+närvarande (CF-obfuskerade), MX-värde. **Ägar-bekräftat (kunde ej testas av mig):** proxy-status
+DNS Only i dashboarden, e-post skicka/ta emot.
+
+**Git:** publikt repo `ChipChop87/chippo.se`, branch `main`, pushad. Senaste pushade commit: `4bf8b7e`.
 
 **Tooling tillgängligt (i förälder-mappen KomboVersion, ej i repot):** Supabase, Playwright,
 Vercel, GitHub CLI m.fl. ligger som npm/CLI utanför `chippo.se/`. Repots `.gitignore` är härdad
@@ -93,19 +109,13 @@ Inga tekniska. Designriktningen har itererats: nyckel → "The Threshold" → ra
 
 ## Next Step
 
-Klart hittills: design + visuell QA, OG-bild, security-content-review (godkänd), GitHub-push,
-och **Cloudflare Pages preview live & verifierad** (https://chippo-se.pages.dev).
+**chippo.se är klar och publicerad (v2.3 live).** Fokus flyttas till **chippo.dev** i en ny session.
 
-**DNS-inventering gjord (read-only) – se `docs/EMAIL_DNS_INVENTORY.md`:**
-- ⚠️ Oväntat: `chippo.se` ligger **redan på Cloudflares nameservers** → inget nameserver-byte kvar.
-- MX → Inleed (188.66.60.10, DNS-only) OK; SPF OK; DMARC `p=none` finns (ingen `rua`).
-- DKIM ej hittad publikt (måste verifieras). `mail/smtp/pop` verkar proxade (måste kontrolleras i Cloudflare-dashboard).
-- `peter@chippo.se` ej testad. Inga DNS/custom domain-ändringar gjorda.
+Valfria/öppna småpunkter på chippo.se (ej blockerande, kan tas senare):
+- Överväg `www → apex`-redirect (idag svarar båda 200) för en enda kanonisk URL.
+- Överväg `rua=` i DMARC för rapporter; verifiera DKIM-selektor om e-post ska signeras.
+- Uppdatera `og-image.png` till foto-tema om så önskas (nuvarande guld-emblem-kort fungerar).
 
-Återstår, i ordning:
-1. Hämta full DNS-export från Cloudflare-zonen + testa `peter@chippo.se` (skicka/ta emot).
-2. Besluta DNS-städning (DKIM, proxy-status på mail/smtp/pop, ev. DMARC `rua`) – efter OK.
-3. Koppla custom domain (`chippo.se` + `www`) i Pages-projektet `chippo-se` (zon finns redan).
-4. Verifiera HTTPS + www/apex efter domänkoppling.
-
-Custom domain och alla DNS/e-poständringar är **medvetet inte** gjorda ännu.
+Nästa stora spår (ny session): **bygg chippo.dev** (Huly-inspirerad cyber security-portfolio,
+case studies, liten Cyber Lab). Separat repo `ChipChop87/chippo.dev`. Använd
+`.claude/prompts/project-start-context-intake` + `chippo-dev-build`.

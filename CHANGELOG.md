@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.3.0 – PUBLICERAD / LIVE (2026-06-04)
+- **chippo.se** och **www.chippo.se** är live via **Cloudflare Pages** (custom domain på projekt `chippo-se`).
+- HTTPS verifierat (apex + www → 200, read-only).
+- DNS verifierad; MX → `mail.chippo.se`; `mail/smtp/pop` satta till **DNS Only**.
+- E-post `peter@chippo.se` fungerar (sändning + mottagning).
+- Kontaktlänken fungerar (Cloudflare Email Obfuscation skriver om `mailto:` på proxydomänen).
+- Inga kodändringar i detta steg – publicering av befintlig kod (commit `4bf8b7e`).
+
 ## 2.3.0 – Full-bleed foto-hero (Phishing-Man) (2026-06-02)
 - Bytte hero till en **full-bleed bakgrundsbild** (Phishing-Man, bukt/solnedgång –
   fishing/phishing-tema): `assets/images/hero-bay.jpg` (desktop) +

@@ -1,5 +1,7 @@
 # chippo.se
 
+**🟢 LIVE:** [https://chippo.se](https://chippo.se) (och [www.chippo.se](https://www.chippo.se)) — hostas på Cloudflare Pages. Publicerad v2.3, 2026-06-04.
+
 Personlig **gateway / landing page** för Peter "Chippo" Ångman – cybersäkerhetsstudent och praktisk säkerhetsbyggare.
 
 Sidan är en liten, snabb och statisk ingångssida vars enda jobb är att leda besökaren vidare till:

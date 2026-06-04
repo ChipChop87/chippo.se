@@ -1,5 +1,30 @@
 # Version Log
 
+## v1.0 – PUBLICERAD: chippo.se v2.3 LIVE
+
+Date: 2026-06-04
+Goal: Publicera chippo.se på egen domän via Cloudflare Pages.
+
+What was done:
+- **chippo.se** och **www.chippo.se** är live via Cloudflare Pages (custom domain på projekt `chippo-se`).
+- HTTPS verifierat (apex + www svarar 200, read-only).
+- DNS verifierad; MX → `mail.chippo.se`; `mail/smtp/pop` satta till **DNS Only** (ägar-bekräftat).
+- E-post `peter@chippo.se` fungerar (sändning + mottagning, ägar-testat).
+- Kontaktlänken fungerar (Cloudflare Email Obfuscation skriver om `mailto:` på proxydomänen –
+  funktionellt för besökare, dolt för skördare).
+- Motsvarar publiceringen av chippo.se v2.3 (kod = commit `4bf8b7e`).
+
+What was not done:
+- Inga DNS-/e-poständringar gjorda av mig i detta steg (endast read-only verifiering + dokumentation).
+- `www → apex`-redirect ej satt (båda svarar 200).
+- DKIM-selektor / DMARC `rua` ej åtgärdade (valfritt).
+
+Known issues / öppet:
+- chippo.dev ännu ej live (separat projekt, nästa session).
+
+Next step:
+- Flytta fokus till **chippo.dev** i ny session.
+
 ## v0.7 – Full-bleed foto-hero (Phishing-Man)
 
 Date: 2026-06-02

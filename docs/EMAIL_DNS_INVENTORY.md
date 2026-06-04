@@ -10,6 +10,24 @@
 
 ---
 
+## UPPDATERING 2026-06-04 – publicerad & verifierad
+
+De tidigare öppna punkterna är nu lösta (ägaren gjorde DNS-/custom domain-arbetet i Cloudflare;
+agenten har endast verifierat read-only):
+
+- ✅ **chippo.se + www.chippo.se live** via Cloudflare Pages (custom domain), HTTPS OK.
+- ✅ **MX** pekar nu på `mail.chippo.se` (uppdaterat sedan inventeringen nedan som visade `_dc-mx…`).
+- ✅ **`mail/smtp/pop` = DNS Only** (ej proxade) – bekräftat av ägaren i dashboarden.
+- ✅ **E-post `peter@chippo.se`** fungerar för sändning och mottagning (ägar-testat).
+- ✅ **Kontaktlänk** fungerar; Cloudflare Email Address Obfuscation skriver om `mailto:` på
+  proxydomänen (funktionellt, dolt för skördare).
+- ℹ️ Valfritt kvar: DKIM-selektor (verifiera om e-post signeras), DMARC `rua=` för rapporter,
+  ev. `www → apex`-redirect.
+
+Avsnitten nedan är den **ursprungliga inventeringen (2026-06-02)** och bevaras som historik.
+
+---
+
 ## Viktigaste upptäckten
 
 `chippo.se` ligger **redan på Cloudflares nameservers**:
