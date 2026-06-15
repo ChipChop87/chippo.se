@@ -111,8 +111,13 @@ Inga halvfärdiga filer. Designen är klar och committad; visuell QA godkänd.
 Se `CHANGELOG.md` / `VERSION_LOG.md`. Senast committat: `53d3e18` (redesign) + `ec2a24e`
 (tooling-notis). Denna handoff-uppdatering: "Update handoff after visual QA".
 
-**2026-06-15:** Publik kontaktadress bytt till `kontakt@chippo.se` (se CHANGELOG `2.3.1`
-/ VERSION_LOG `v1.1`). Ej committad/pushad ännu – väntar på godkännande.
+**2026-06-15 (avslutad session):** Publik kontaktadress bytt till `kontakt@chippo.se`
+(se CHANGELOG `2.3.1` / VERSION_LOG `v1.1`). **Committad & pushad:**
+`36a06be Update public contact email to kontakt@chippo.se` (→ `origin/main`, working tree clean).
+**Live & verifierad** på https://chippo.se, https://www.chippo.se och https://chippo-se.pages.dev
+(HTTP 200; publika mailto dekodar till `kontakt@chippo.se`, inga `peter@chippo.se` kvar publikt;
+svenska tecken OK; Pages-build grön). chippo.se-spåret är fortsatt **avslutat** –
+nästa fokus: **chippo.dev** (ny session).
 
 ## Failed attempts
 
