@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.3.1 – Publik kontaktadress → kontakt@chippo.se (2026-06-15)
+- Bytte den **publika kontaktadressen** på sajten från `peter@chippo.se` till `kontakt@chippo.se`
+  (verifierad och fungerande). Uppdaterade alla fyra `mailto:`-länkar (header, hero-CTA, kontaktkort,
+  footer) och den synliga adresstexten i kontaktkortet i `index.html`.
+- Uppdaterade aktuell dokumentation (README, INSTRUKTIONER, SAMMANFATTNING, handoff,
+  `docs/RELEASE_NOTES.md`, `docs/EMAIL_DNS_INVENTORY.md`, VERSION_LOG).
+- **Inga** design-, DNS-, Cloudflare-, custom domain- eller e-postkonto-ändringar.
+  `peter@chippo.se`-brevlådan är orörd – den visas bara inte längre publikt.
+
 ## 2.3.0 – PUBLICERAD / LIVE (2026-06-04)
 - **chippo.se** och **www.chippo.se** är live via **Cloudflare Pages** (custom domain på projekt `chippo-se`).
 - HTTPS verifierat (apex + www → 200, read-only).

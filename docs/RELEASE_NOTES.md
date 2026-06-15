@@ -4,6 +4,11 @@
 **Status:** LIVE
 **Kod:** commit `4bf8b7e` (branch `main`, repo `ChipChop87/chippo.se`)
 
+> **Uppdatering 2026-06-15:** Den **publika kontaktadressen** har bytts till `kontakt@chippo.se`
+> (verifierad/fungerande). `peter@chippo.se`-brevlådan finns kvar men visas inte längre publikt.
+> Innehållsändring i `index.html` + dokumentation – **inga** DNS-, Cloudflare-, custom domain-
+> eller e-postkonto-ändringar. Se CHANGELOG `2.3.1` / VERSION_LOG `v1.1`.
+
 ## Sammanfattning
 chippo.se v2.3 är publicerad på sin egen domän. Sidan är en statisk, elegant personlig
 gateway (full-bleed foto-hero med flytande sol-likt guld-emblem) som leder vidare till

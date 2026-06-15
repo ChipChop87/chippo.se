@@ -8,7 +8,7 @@ Sidan är en liten, snabb och statisk ingångssida vars enda jobb är att leda b
 
 - **Cyberportfolion** → [chippo.dev](https://chippo.dev)
 - **GitHub** → [github.com/ChipChop87](https://github.com/ChipChop87)
-- **Kontakt** → [peter@chippo.se](mailto:peter@chippo.se)
+- **Kontakt** → [kontakt@chippo.se](mailto:kontakt@chippo.se)
 
 `chippo.se` är **inte** den fullständiga portfolion. Case studies, labbar och Cyber Lab hör hemma på `chippo.dev`.
 

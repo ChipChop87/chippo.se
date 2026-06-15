@@ -38,6 +38,15 @@ chippo.se är nu publicerad på sin egen domän via Cloudflare Pages:
 
 Detta motsvarar **publiceringen av chippo.se v2.3**. Se `docs/RELEASE_NOTES.md`.
 
+### 🔄 UPPDATERING – publik kontaktadress → kontakt@chippo.se (2026-06-15)
+
+Den **publika kontaktadressen** på chippo.se har bytts från `peter@chippo.se` till
+`kontakt@chippo.se` (verifierad och fungerande, fungerar även på chippo.dev-spåret).
+Ändrat i `index.html`: alla fyra `mailto:`-länkar (header, hero-CTA, kontaktkort, footer)
++ den synliga adresstexten i kontaktkortet. Aktuell dokumentation uppdaterad.
+`peter@chippo.se`-brevlådan finns kvar men visas inte längre publikt.
+**Inga** design-, DNS-, Cloudflare-, custom domain- eller e-postkonto-ändringar.
+
 **Verifierat av mig (read-only):** apex + www 200/HTTPS, titel/`Ångman`-rendering, kontaktlänkar
 närvarande (CF-obfuskerade), MX-värde. **Ägar-bekräftat (kunde ej testas av mig):** proxy-status
 DNS Only i dashboarden, e-post skicka/ta emot.
@@ -101,6 +110,9 @@ Inga halvfärdiga filer. Designen är klar och committad; visuell QA godkänd.
 
 Se `CHANGELOG.md` / `VERSION_LOG.md`. Senast committat: `53d3e18` (redesign) + `ec2a24e`
 (tooling-notis). Denna handoff-uppdatering: "Update handoff after visual QA".
+
+**2026-06-15:** Publik kontaktadress bytt till `kontakt@chippo.se` (se CHANGELOG `2.3.1`
+/ VERSION_LOG `v1.1`). Ej committad/pushad ännu – väntar på godkännande.
 
 ## Failed attempts
 

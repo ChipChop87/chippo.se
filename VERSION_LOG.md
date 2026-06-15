@@ -1,5 +1,27 @@
 # Version Log
 
+## v1.1 – Publik kontaktadress → kontakt@chippo.se
+
+Date: 2026-06-15
+Goal: Byta den publika kontaktadressen på chippo.se från `peter@chippo.se` till `kontakt@chippo.se`.
+
+What was done:
+- Bytte alla fyra `mailto:`-länkar (header, hero-CTA, kontaktkort, footer) och den synliga
+  adresstexten i kontaktkortet i `index.html` till `kontakt@chippo.se` (verifierad/fungerande).
+- Uppdaterade aktuell dokumentation (README, INSTRUKTIONER, SAMMANFATTNING, handoff,
+  `docs/RELEASE_NOTES.md`, `docs/EMAIL_DNS_INVENTORY.md`, CHANGELOG).
+
+What was not done:
+- Inga design-, DNS-, Cloudflare-, custom domain- eller e-postkonto-ändringar.
+- `peter@chippo.se`-brevlådan inte rörd (visas bara inte längre publikt).
+- Ingen commit/push (väntar på godkännande).
+
+Known issues / öppet:
+- Inga.
+
+Next step:
+- Commit + push efter godkännande → Cloudflare Pages bygger om automatiskt.
+
 ## v1.0 – PUBLICERAD: chippo.se v2.3 LIVE
 
 Date: 2026-06-04

@@ -1,8 +1,11 @@
 # Sammanfattning – chippo.se v2.3
 
 > **🟢 PUBLICERAD 2026-06-04:** chippo.se + www.chippo.se är live via Cloudflare Pages, HTTPS OK,
-> DNS verifierad (mail/smtp/pop DNS Only), e-post `peter@chippo.se` fungerar, kontaktlänk fungerar.
+> DNS verifierad (mail/smtp/pop DNS Only), e-post fungerar, publik kontaktlänk → `kontakt@chippo.se` (verifierad).
 > Se `docs/RELEASE_NOTES.md`. Nästa fokus: chippo.dev (ny session).
+>
+> **Uppdatering 2026-06-15:** Publik kontaktadress bytt från `peter@chippo.se` till `kontakt@chippo.se`
+> (innehållsändring i `index.html` + docs). Inga DNS-/Cloudflare-/e-postkonto-ändringar.
 
 
 ## Vad som byggdes
@@ -48,7 +51,7 @@ VERSION_LOG, CHANGELOG, handoff).
 
 ## Kända begränsningar
 - OG-förhandsbild saknas vid social delning.
-- Kontaktadress `peter@chippo.se` ej bekräftad som aktiv (fallback gmail).
+- Publik kontaktadress: `kontakt@chippo.se` (verifierad och fungerande).
 - Visuell rendering ej ögongranskad i grafisk browser.
 
 ## Nästa steg

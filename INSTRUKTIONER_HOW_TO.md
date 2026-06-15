@@ -36,7 +36,7 @@ i `index.html`. Texten ändras i `.pl-eyebrow/.pl-title/.pl-sub/.pl-go`.
 Länkarna finns på flera ställen (header, hero-CTA, kort, footer). Ändra konsekvent:
 - Portfolio → `https://chippo.dev`
 - GitHub → `https://github.com/ChipChop87`
-- Kontakt → `mailto:peter@chippo.se`
+- Kontakt → `mailto:kontakt@chippo.se`
 Om e-postadressen ändras: uppdatera **alla** förekomster och notera det i
 `CHANGELOG.md` och `handoff.md`.
 

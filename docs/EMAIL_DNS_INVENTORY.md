@@ -23,6 +23,9 @@ agenten har endast verifierat read-only):
   proxydomänen (funktionellt, dolt för skördare).
 - ℹ️ Valfritt kvar: DKIM-selektor (verifiera om e-post signeras), DMARC `rua=` för rapporter,
   ev. `www → apex`-redirect.
+- ℹ️ **2026-06-15:** Den **publika kontaktadressen** på sajten är bytt till `kontakt@chippo.se`.
+  Detta är en innehållsändring i `index.html` – **inga DNS-, MX- eller mailbox-ändringar**.
+  `peter@chippo.se`-brevlådan är orörd. DNS-/e-post-inventeringen nedan gäller fortsatt.
 
 Avsnitten nedan är den **ursprungliga inventeringen (2026-06-02)** och bevaras som historik.
 
